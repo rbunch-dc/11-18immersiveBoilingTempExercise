@@ -41,12 +41,12 @@ class TemperatureApp extends Component{
         let cTemp = '';
         if(scale === 'c'){
             // convert the celcius to f
-            fTemp = (temp * 9 / 5) + 32;
+            fTemp = Math.round((temp * 9 / 5) + 32);
             // no need to convert to c. it's already c.
             cTemp = temp;
         }else if(scale === 'f'){
             fTemp = temp;
-            cTemp = (temp - 32) * 5 / 9
+            cTemp = Math.round((temp - 32) * 5 / 9);
         }
 
         return(
